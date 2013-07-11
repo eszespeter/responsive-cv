@@ -1,0 +1,223 @@
+/* 
+	Title:		Style for a responsive cv
+	Author: 	peter.eszes@gmail.com
+*/
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('HelveticaNeue.ttf') format('truetype'),
+	     url('HelveticaNeue.otf'),
+	     url('HelveticaNeue.oet'),
+	     url('HelveticaNeue.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HelveticaNeue-Light';
+	src: url('HelveticaNeueLight.ttf') format('truetype'),
+	     url('HelveticaNeueLight.otf'),
+	     url('HelveticaNeueLight.oet'),
+	     url('HelveticaNeueLight.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* style */
+
+body {
+	padding: 50px 0 0 0;
+	color: #333;
+	background: #fafafa;
+	font-size: 100%;
+	font-family: "HelveticaNeue", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #89D22E;
+}
+
+cite {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+light {
+	font-family: "HelveticaNeue-Light";
+}
+
+color{
+	color: #89D22E;
+}
+
+img {
+	max-width: 100%;
+	float: none;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+}
+
+img.half {
+	max-width: 50%;
+}
+
+img.third {
+	max-width: 33%;
+}
+
+/* structure for the site */
+
+#wrap {
+	max-width: 1200px;
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container {
+	display: block;
+	max-width: 98%;
+	padding: 0;
+	margin: 3em auto;
+	text-align: center;
+	background: aqua;
+}
+
+.container-bannerleft {
+	display: block;
+	width: 50%;
+	float: left;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+.container-bannerright {
+	display: block;
+	width: 50%;
+	float: right;
+	padding: 0; 
+	margin: 0;
+}
+
+.container-half-left {
+	display: block;
+	float: left;
+	width: 40%;
+	padding: 0;
+	margin: 1em 0 0 8%; 
+}
+
+.container-half-right {
+	display: block;
+	float: right;
+	width: 40%;
+	padding: 0;
+	margin: 1em 8% 0 0;	
+}
+
+.container-phone {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;	
+}
+
+.container-footer {
+	display: block;
+	width: 100%;
+	float: left;
+	margin: 4em 0 2em 0;
+	padding:0;
+}
+
+/* headings */
+
+.container-bannerleft h1,h2 {
+	font-family: "Droid Serif", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2em;
+	padding: 0;
+	margin: 1.2em 0 0 0;
+	text-align: center;
+}
+
+h1,h2 {
+	font-family: "Droid Serif", serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 3em;
+	padding: 0;
+	margin: 0;
+}
+
+/* p */
+
+p {
+	font-family: "HelveticaNeue";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding: .5em 0;
+	margin: 0;
+}
+
+/* self-clear for floating */
+
+.group:after,
+.container:after,
+.container-phone:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* the responsive part */
+
+@media screen and (min-width: 1200px) {
+	body { font-size: 115%; }
+	.container-phone { display: none !important;}
+}
+
+@media screen and (max-width: 1199px) and (min-width: 801px) {
+	.container-bannerright {  width: 100%; float: none; margin: 0 auto; padding: 0; }
+	.container-bannerleft { width: 100%; float: none; padding: 0; margin: 2em auto; }
+	.container-phone { display: none !important;}
+}
+
+@media screen and (max-width: 800px) {
+	body { font-size: 115%; margin: 0; padding: 25px 0 0 0; }
+	.container-half { width: 100%; margin: 0; padding: 0; }
+	.container-bannerright {  width: 100%; float: none; margin: 0 auto; padding: 0; }
+	.container-bannerleft { width: 100%; float: none; padding: 0; margin: 2em auto; }
+	.container-phone { display: none; }
+}
+
+/* hide everything else and show the mobile section */
+
+@media screen and (max-width: 500px) {
+	body { margin: 0; padding: 0; font-size: 90%; }
+	.container { display: none !important; }
+	.container-half-left { display: none !important; }
+	.container-half-right { display: none !important; }
+	.container-bannerleft { display: none !important; }
+	.container-bannerright { display: none !important; }
+	.container-phone { display: block; }
+	p { width: 98%; }
+}
