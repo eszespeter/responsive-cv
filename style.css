@@ -5,20 +5,20 @@
 
 @font-face {
 	font-family: 'HelveticaNeue';
-	src: url('HelveticaNeue.ttf') format('truetype'),
-	     url('HelveticaNeue.otf'),
-	     url('HelveticaNeue.oet'),
-	     url('HelveticaNeue.woff') format('woff');
+	src: url('fonts/HelveticaNeue.ttf') format('truetype'),
+	     url('fonts/HelveticaNeue.otf'),
+	     url('fonts/HelveticaNeue.oet'),
+	     url('fonts/HelveticaNeue.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'HelveticaNeue-Light';
-	src: url('HelveticaNeueLight.ttf') format('truetype'),
-	     url('HelveticaNeueLight.otf'),
-	     url('HelveticaNeueLight.oet'),
-	     url('HelveticaNeueLight.woff') format('woff');
+	src: url('fonts/HelveticaNeueLight.ttf') format('truetype'),
+	     url('fonts/HelveticaNeueLight.otf'),
+	     url('fonts/HelveticaNeueLight.oet'),
+	     url('fonts/HelveticaNeueLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
